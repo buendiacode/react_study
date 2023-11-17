@@ -9,16 +9,37 @@
     <script src="./src/react-dom18.development.js"></script>
     <script src="./src/babel.min.js"></script>
     <!--<script src="http://localhost:8097"></script>-->
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
-<div id ="root"></div>
+<form action="" method="get">  
+    <input type="text" name="msg" id="msg">
+    <input type="button" value="post" onclick="addMSG(this)">
+</form>
+<div id="root"></div>
+<div id="msg-box">
+    <ul id="msg-list"></ul>
+</div>
+
 <script type="text/babel">
 let root = document.querySelector('#root');
-let el = <div>
-    <p class="hello">Hello React</p>
-</div>;
+let msg_list = document.querySelector('#msg-list');
+function addMSG(own) {
+    //own.preventDefault();
+    //console.log(own);
+    //console.log('click addMSG');
+    let msg = document.querySelector('#msg');
+    let li = document.createElement('li');
+    let el = <div>
+        <p class="msg">{msg.value? msg.value: ''}</p>
+    </div>;
+    ReactDOM.render(el, li);
+    msg_list.append(li);
+}
 
-ReactDOM.render(el, root);
+function textChange(target) {
+    console.log('target');
+}
 </script>
 </body>
 </html>
