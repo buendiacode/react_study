@@ -8,17 +8,17 @@
     <script src="./src/react18.development.js"></script>
     <script src="./src/react-dom18.development.js"></script>
     <script src="./src/babel.min.js"></script>
-    <script src="http://localhost:8097"></script>
+    <!--<script src="http://localhost:8097"></script>-->
 </head>
 <body>
 <div id ="root"></div>
-<script type="text/ecmascript">
+<script type="text/babel">
 let root = document.querySelector('#root');
-let el = React.createElement
-    ('p', {class:'hello'}, 'Hello React');
+let el = <div>
+    <p class="hello">Hello React</p>
+</div>;
 
 ReactDOM.render(el, root);
-
 </script>
 </body>
 </html>
