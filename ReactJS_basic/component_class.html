@@ -1,0 +1,30 @@
+<!--2023/11/25-22:51-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Component</title>
+    <script src="./src/react18.development.js"></script>
+    <script src="./src/react-dom18.development.js"></script>
+    <script src="./src/babel.min.js"></script>
+</head>
+<body>
+<div id ="root"></div>
+
+<script type="text/babel">
+let root = document.getElementById("root")
+function App(props) {
+    return <p>
+    React Component
+    </p>
+}
+
+let el =  <div>
+    <App />
+</div> 
+
+ReactDOM.render(el, root)
+</script>
+</body>
+</html>
