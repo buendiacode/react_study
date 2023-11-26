@@ -14,10 +14,17 @@
 
 <script type="text/babel">
 let root = document.getElementById("root")
-function App(props) {
-    return <p>
-    React Component
-    </p>
+class App extends React.Component {
+    
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        return <p>
+        React Class Component
+        </p>
+    }
 }
 
 let el =  <div>
