@@ -7,8 +7,7 @@
     <title>React Component</title>
     <script src="./src/react18.development.js"></script>
     <script src="./src/react-dom18.development.js"></script>
-    <script src="./src/babel.min.js"></script>
-</head>
+    </head>
 <body>
 <div id ="root"></div>
 
@@ -18,16 +17,23 @@ class App extends React.Component {
     
     constructor(props) {
         super(props)
+        this.state = { 
+            style:this.style
+        }
     }
 
-    render() {
-        return <p>
+    style = {
+        color:'skyblue', 
+    }
+
+    render(props) {
+        return <p style={this.state.style}>
         React Class Component
         </p>
     }
 }
 
-let el =  <div>
+let el = <div>
     <App />
 </div> 
 
